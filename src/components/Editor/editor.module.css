@@ -15,14 +15,6 @@
   flex-direction: column;
   justify-content: center;
 }
-@media print {
-  .editorContainer {
-    background-color: white;
-    color: black;
-    padding: 0;
-    margin: 0
-  }
-}
 
 .editorComponent {
   background-color: white;
@@ -40,5 +32,28 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+@media print {
+  .container {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    background-color: white;
+  }
+
+  .editorContainer {
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0
+  }
+
+  .editorComponent {
+    box-shadow: none;
+    width: auto;
+    min-height: auto;
+    padding: 0.625rem 0.875rem;
   }
 }
