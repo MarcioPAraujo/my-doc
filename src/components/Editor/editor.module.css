@@ -1,0 +1,44 @@
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+
+  background-color: var(--pappper);
+}
+.editorContainer {
+  min-width: max-content;
+  width: 51rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media print {
+  .editorContainer {
+    background-color: white;
+    color: black;
+    padding: 0;
+    margin: 0
+  }
+}
+
+.editorComponent {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 65.875rem;
+  width: 51rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  cursor: text;
+
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-right: 0.875rem;
+
+  &:focus {
+    outline: none;
+  }
+}
