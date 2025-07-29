@@ -2,12 +2,19 @@
 import React from "react";
 
 import { useEditor, EditorContent } from "@tiptap/react";
+import { TaskList, TaskItem } from "@tiptap/extension-list";
 import StarterKit from "@tiptap/starter-kit";
 import styles from "./editor.module.css";
 
 function Editor() {
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit,
+      TaskList,
+      TaskItem.configure({
+        nested: true,
+      }),
+    ],
     content: "<p>Hello World! 🌍</p>",
     immediatelyRender: false,
     editorProps: {
