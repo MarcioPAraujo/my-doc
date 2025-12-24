@@ -8,9 +8,32 @@ import styles from "./editor.module.css";
 import { TableKit } from "@tiptap/extension-table";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
+import { useEditorStore } from "@/store/use-edito-store";
 
 function Editor() {
+  const { setEditor } = useEditorStore();
   const editor = useEditor({
+    onCreate(props) {
+      setEditor(props.editor);
+    },
+    onBlur({ editor }) {
+      setEditor(editor);
+    },
+    onUpdate({ editor }) {
+      setEditor(editor);
+    },
+    onSelectionUpdate({ editor }) {
+      setEditor(editor);
+    },
+    onTransaction({ editor }) {
+      setEditor(editor);
+    },
+    onContentError({ editor }) {
+      setEditor(editor);
+    },
+    onDestroy() {
+      setEditor(null);
+    },
     extensions: [
       StarterKit,
       TaskList,

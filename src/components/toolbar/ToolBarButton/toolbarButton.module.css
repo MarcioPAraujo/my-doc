@@ -1,0 +1,27 @@
+.toolbarButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+
+  transition: all 0.3s ease;
+  &:hover {
+    background: var(--gray-d9d9d9);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &.selected {
+    background-color: var(--gray-e7e7e7);
+  }
+
+}
