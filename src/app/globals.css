@@ -6,15 +6,16 @@
   --pappper: #f5f5f5;
 
   --gray-fafafa: #fafafa;
-  --gray-d9d9d9: #d9d9d9;
+  --gray-e0e0e0: #e0e0e0;
   --gray-e7e7e7: #e7e7e7;
+  --gray-d9d9d9: #d9d9d9;
   --gray-a2a2a2: #a2a2a2;
   --gray-7a7a7a: #7a7a7a;
   --gray-454545: #454545;
   --gray-3f3f3f: #3f3f3f;
   --gray-2d2d2: #2d2d2d;
 
-  -blue-1199ff: #1199ff;
+  --blue-1199ff: #1199ff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -47,12 +48,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 .tiptap {
@@ -137,6 +132,8 @@ a {
 
     input[type='checkbox'] {
       cursor: pointer;
+      accent-color: var(--blue-1199ff);
+      color: red;
     }
 
     ul[data-type='taskList'] {

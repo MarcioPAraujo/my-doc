@@ -13,14 +13,13 @@ const ToolBarButton: React.FC<IToolBarButtonProps> = ({
   disabled = false,
   selected = false,
 }) => {
-  const className = `toolbar-button ${selected ? "selected" : ""} ${
+  const className = `toolbar-button ${selected ? styles.selected : ""} ${
     styles.toolbarButton
   }`;
 
   return (
     <button
       type="button"
-      aria-label="Tool Bar Button"
       onClick={onClick}
       disabled={disabled}
       className={className}
